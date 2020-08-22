@@ -163,7 +163,7 @@ function annoyingSong(number){
   }
 }
 
-annoyingSong(5);
+// annoyingSong(5);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -174,8 +174,26 @@ annoyingSong(5);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
+function gradeCalc(number){
+
+  if (number > 100){
+    return 'Please enter a valid grade.';
+  } else if (number >= 90){
+    return 'A';
+  } else if (number >= 80){
+    return 'B';
+  } else if (number >= 70){
+    return 'C';
+  } else if (number >= 60){
+    return 'D';
+  } else {
+    return 'F';
+  }
+
+}
+  
+// console.log(gradeCalc(95));
   
   
 
