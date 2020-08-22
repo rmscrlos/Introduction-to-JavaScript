@@ -67,30 +67,30 @@ function dogYears (humanAge) {
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-function dogFeeder(dogWeight, dogAge) {
-  // adult dogs
-  if (dogAge >= 1){
-    if (dogWeight < 5){
-      return dogWeight * .05;
-    } else if (dogWeight <= 10) {
-      return dogWeight * .04;
-    } else if (dogWeight <= 15) {
-      return dogWeight * .03;
-    } else if (dogWeight > 15) {
-      return dogWeight * .02;
-    }
-  }
-  // dog age less one 1 year
-  if (dogAge <= 1){
-    if (dogAge <= 4/12) {
-      return dogWeight * .10;
-    } else if (dogAge <= 7/12) {
-      return dogWeight * .05;
-    } else if (dogAge <= 1) {
-      return dogWeight * .04;
-    }
-  }
-}
+// function dogFeeder(dogWeight, dogAge) {
+//   // adult dogs
+//   if (dogAge >= 1){
+//     if (dogWeight < 5){
+//       return dogWeight * .05;
+//     } else if (dogWeight <= 10) {
+//       return dogWeight * .04;
+//     } else if (dogWeight <= 15) {
+//       return dogWeight * .03;
+//     } else if (dogWeight > 15) {
+//       return dogWeight * .02;
+//     }
+//   }
+//   // dog age less one 1 year
+//   if (dogAge <= 1){
+//     if (dogAge <= 4/12) {
+//       return dogWeight * .10;
+//     } else if (dogAge <= 7/12) {
+//       return dogWeight * .05;
+//     } else if (dogAge <= 1) {
+//       return dogWeight * .04;
+//     }
+//   }
+// }
 
 // console.log(dogFeeder(15,1));
 
@@ -101,36 +101,36 @@ function dogFeeder(dogWeight, dogAge) {
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-function rps(yourChoice) {
-  // creating computer choice
-  const computerChoice = Math.floor(Math.random() * 3);
-  if (computerChoice === 0){
-    computerChoice = 'rock';
-  } else if (computerPick === 1) {
-    computerChoice = 'paper';
-  } else {
-    computerChoice = 'scissors';
-  }
+// function rps(yourChoice) {
+//   // creating computer choice
+//   let computerChoice = Math.floor(Math.random() * 3);
+//   if (computerChoice === 0){
+//     computerChoice = 'rock';
+//   } else if (computerChoice === 1) {
+//     computerChoice = 'paper';
+//   } else {
+//     computerChoice = 'scissor';
+//   }
 
-  // game logic - win or lose
-  if (computerChoice === yourChoice) {
-    return 'Tie';
-  } else if (computerChoice === 'rock' && yourChoice === 'scissor'){
-    return 'You lose!'
-  } else if (computerChoice === 'rock' && yourChoice === 'paper'){
-    return 'You win!'
-  } else if (computerChoice === 'paper' && yourChoice === 'scissor'){
-    return 'You lose!'
-  } else if (computerChoice === 'paper' && yourChoice === 'rock'){
-    return 'You win!'
-  } else if (computerChoice === 'scissor' && yourChoice === 'rock'){
-    return 'You lose!'
-  } else if (computerChoice === 'scissor' && yourChoice === 'paper'){
-    return 'You win!'
-  }
-}
+//   // game logic - win or lose
+//   if (computerChoice === yourChoice) {
+//     return 'Tie';
+//   } else if (computerChoice === 'rock' && yourChoice === 'scissor'){
+//     return 'You lose!'
+//   } else if (computerChoice === 'rock' && yourChoice === 'paper'){
+//     return 'You win!'
+//   } else if (computerChoice === 'paper' && yourChoice === 'scissor'){
+//     return 'You lose!'
+//   } else if (computerChoice === 'paper' && yourChoice === 'rock'){
+//     return 'You win!'
+//   } else if (computerChoice === 'scissor' && yourChoice === 'rock'){
+//     return 'You lose!'
+//   } else if (computerChoice === 'scissor' && yourChoice === 'paper'){
+//     return 'You win!'
+//   }
+// }
   
-console.log(rps('rock'));
+// console.log(rps('rock'));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
