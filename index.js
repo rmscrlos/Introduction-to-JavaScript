@@ -114,11 +114,11 @@ function rps(yourChoice) {
 
   // game logic - win or lose
   if (computerChoice === yourChoice) {
-    return 'TIE!!!';
+    return 'TIE!';
   } else if (computerChoice === 'rock' && yourChoice === 'paper'){
-    return `You lose!! ${computerChoice} beats ${yourChoice}!`
-  } else if (computerChoice === 'rock' && yourChoice === 'scissors'){
     return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'rock' && yourChoice === 'scissors'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
   } else if (computerChoice === 'paper' && yourChoice === 'rock'){
     return `You lose! ${computerChoice} beats ${yourChoice}!`
   } else if (computerChoice === 'paper' && yourChoice === 'scissors'){
@@ -211,6 +211,35 @@ function gradeCalc(number){
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
 
+function rps(yourChoice) {
+  // creating computer choice
+  let computerChoice = Math.floor(Math.random() * 3);
+  if (computerChoice === 0){
+    computerChoice = 'rock';
+  } else if (computerChoice === 1) {
+    computerChoice = 'paper';
+  } else {
+    computerChoice = 'scissors';
+  }
 
+  // game logic - win or lose
+  if (computerChoice === yourChoice) {
+    return 'TIE!';
+  } else if (computerChoice === 'rock' && yourChoice === 'paper'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'rock' && yourChoice === 'scissors'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'rock'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'scissors'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'paper'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'rock'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  }
+}
 
-
+let choice = prompt("Please choose one from rock, paper and scissors")
+choice.toLocaleLowerCase();
+console.log(rps(choice.toLocaleLowerCase()));
