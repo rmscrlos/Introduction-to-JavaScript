@@ -1,35 +1,53 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
+  var age = 25;
+  if (age > 18) {
+    // console.log(true);
+  } else {
+    // console.log(false);
+  }
 
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+let firstVar = 2;
+const secondVar = 3;
+if (secondVar === 3) {
+  firstVar = 5;
+}
 
+// console.log(firstVar);
 
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+let stringNum = Number('1999');
 
+// console.log(stringNum);
 
 
 
 //Task d: Write a function to multiply a*b 
 
+function multiply (a, b) {
+  return a * b;
+}
 
-
-
+// console.log(multiply(2, 2));
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
 
+function dogYears (humanAge) {
+  return humanAge * 7;
+}
 
-
+// console.log(dogYears(25));
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -49,8 +67,32 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder(dogWeight, dogAge) {
+  // adult dogs
+  if (dogAge >= 1){
+    if (dogWeight < 5){
+      return dogWeight * .05;
+    } else if (dogWeight <= 10) {
+      return dogWeight * .04;
+    } else if (dogWeight <= 15) {
+      return dogWeight * .03;
+    } else if (dogWeight > 15) {
+      return dogWeight * .02;
+    }
+  }
+  // dog age less one 1 year
+  if (dogAge <= 1){
+    if (dogAge <= 4/12) {
+      return dogWeight * .10;
+    } else if (dogAge <= 7/12) {
+      return dogWeight * .05;
+    } else if (dogAge <= 1) {
+      return dogWeight * .04;
+    }
+  }
+}
 
-
+// console.log(dogFeeder(15,1));
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -59,22 +101,54 @@
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function rps(yourChoice) {
+  // creating computer choice
+  let computerChoice = Math.floor(Math.random() * 3);
+  if (computerChoice === 0){
+    computerChoice = 'rock';
+  } else if (computerChoice === 1) {
+    computerChoice = 'paper';
+  } else {
+    computerChoice = 'scissors';
+  }
 
+  // game logic - win or lose
+  if (computerChoice === yourChoice) {
+    return 'TIE!';
+  } else if (computerChoice === 'rock' && yourChoice === 'paper'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'rock' && yourChoice === 'scissors'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'rock'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'scissors'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'paper'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'rock'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  }
+}
   
-  
+// console.log(rps('rock'));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function toMiles(kilometers) {
+  return kilometers * 1.609;
+}
 
-
-
+// console.log(kiloToMiles(3));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function toCm(feet){
+  return feet * 30.48;
+}
 
-
+// console.log(toCm(3));
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -82,8 +156,14 @@
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    console.log(i);
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
+  }
+}
 
-
+// annoyingSong(5);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -94,8 +174,26 @@
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
+function gradeCalc(number){
+
+  if (number > 100){
+    return 'Please enter a valid grade.';
+  } else if (number >= 90){
+    return 'A';
+  } else if (number >= 80){
+    return 'B';
+  } else if (number >= 70){
+    return 'C';
+  } else if (number >= 60){
+    return 'D';
+  } else {
+    return 'F';
+  }
+
+}
+  
+// console.log(gradeCalc(95));
   
   
 
@@ -113,6 +211,35 @@
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
 
+function rps(yourChoice) {
+  // creating computer choice
+  let computerChoice = Math.floor(Math.random() * 3);
+  if (computerChoice === 0){
+    computerChoice = 'rock';
+  } else if (computerChoice === 1) {
+    computerChoice = 'paper';
+  } else {
+    computerChoice = 'scissors';
+  }
 
+  // game logic - win or lose
+  if (computerChoice === yourChoice) {
+    return 'TIE!';
+  } else if (computerChoice === 'rock' && yourChoice === 'paper'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'rock' && yourChoice === 'scissors'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'rock'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'scissors'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'paper'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'rock'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  }
+}
 
-
+let choice = prompt("Please choose one from rock, paper and scissors")
+choice.toLocaleLowerCase();
+console.log(rps(choice.toLocaleLowerCase()));
