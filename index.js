@@ -67,30 +67,30 @@ function dogYears (humanAge) {
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-// function dogFeeder(dogWeight, dogAge) {
-//   // adult dogs
-//   if (dogAge >= 1){
-//     if (dogWeight < 5){
-//       return dogWeight * .05;
-//     } else if (dogWeight <= 10) {
-//       return dogWeight * .04;
-//     } else if (dogWeight <= 15) {
-//       return dogWeight * .03;
-//     } else if (dogWeight > 15) {
-//       return dogWeight * .02;
-//     }
-//   }
-//   // dog age less one 1 year
-//   if (dogAge <= 1){
-//     if (dogAge <= 4/12) {
-//       return dogWeight * .10;
-//     } else if (dogAge <= 7/12) {
-//       return dogWeight * .05;
-//     } else if (dogAge <= 1) {
-//       return dogWeight * .04;
-//     }
-//   }
-// }
+function dogFeeder(dogWeight, dogAge) {
+  // adult dogs
+  if (dogAge >= 1){
+    if (dogWeight < 5){
+      return dogWeight * .05;
+    } else if (dogWeight <= 10) {
+      return dogWeight * .04;
+    } else if (dogWeight <= 15) {
+      return dogWeight * .03;
+    } else if (dogWeight > 15) {
+      return dogWeight * .02;
+    }
+  }
+  // dog age less one 1 year
+  if (dogAge <= 1){
+    if (dogAge <= 4/12) {
+      return dogWeight * .10;
+    } else if (dogAge <= 7/12) {
+      return dogWeight * .05;
+    } else if (dogAge <= 1) {
+      return dogWeight * .04;
+    }
+  }
+}
 
 // console.log(dogFeeder(15,1));
 
