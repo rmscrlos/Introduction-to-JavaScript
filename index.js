@@ -101,36 +101,36 @@ function dogFeeder(dogWeight, dogAge) {
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-// function rps(yourChoice) {
-//   // creating computer choice
-//   let computerChoice = Math.floor(Math.random() * 3);
-//   if (computerChoice === 0){
-//     computerChoice = 'rock';
-//   } else if (computerChoice === 1) {
-//     computerChoice = 'paper';
-//   } else {
-//     computerChoice = 'scissor';
-//   }
+function rps(yourChoice) {
+  // creating computer choice
+  let computerChoice = Math.floor(Math.random() * 3);
+  if (computerChoice === 0){
+    computerChoice = 'rock';
+  } else if (computerChoice === 1) {
+    computerChoice = 'paper';
+  } else {
+    computerChoice = 'scissors';
+  }
 
-//   // game logic - win or lose
-//   if (computerChoice === yourChoice) {
-//     return 'Tie';
-//   } else if (computerChoice === 'rock' && yourChoice === 'scissor'){
-//     return 'You lose!'
-//   } else if (computerChoice === 'rock' && yourChoice === 'paper'){
-//     return 'You win!'
-//   } else if (computerChoice === 'paper' && yourChoice === 'scissor'){
-//     return 'You lose!'
-//   } else if (computerChoice === 'paper' && yourChoice === 'rock'){
-//     return 'You win!'
-//   } else if (computerChoice === 'scissor' && yourChoice === 'rock'){
-//     return 'You lose!'
-//   } else if (computerChoice === 'scissor' && yourChoice === 'paper'){
-//     return 'You win!'
-//   }
-// }
+  // game logic - win or lose
+  if (computerChoice === yourChoice) {
+    return 'TIE!!!';
+  } else if (computerChoice === 'rock' && yourChoice === 'paper'){
+    return `You lose!! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'rock' && yourChoice === 'scissors'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'rock'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'paper' && yourChoice === 'scissors'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'paper'){
+    return `You lose! ${computerChoice} beats ${yourChoice}!`
+  } else if (computerChoice === 'scissors' && yourChoice === 'rock'){
+    return `You win! ${yourChoice} beats ${computerChoice}!`
+  }
+}
   
-// console.log(rps('rock'));
+console.log(rps('rock'));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
