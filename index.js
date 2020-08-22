@@ -136,7 +136,7 @@ function rps(yourChoice) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function kiloToMiles(kilometers) {
+function toMiles(kilometers) {
   return kilometers * 1.609;
 }
 
@@ -148,7 +148,7 @@ function toCm(feet){
   return feet * 30.48;
 }
 
-console.log(toCm(3));
+// console.log(toCm(3));
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -156,8 +156,14 @@ console.log(toCm(3));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    console.log(i);
+    console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
+  }
+}
 
-
+annoyingSong(5);
 
 
 /************************************************************** Task 7 **************************************************************/
