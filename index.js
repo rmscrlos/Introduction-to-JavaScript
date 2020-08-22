@@ -130,20 +130,25 @@ function rps(yourChoice) {
   }
 }
   
-console.log(rps('rock'));
+// console.log(rps('rock'));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kiloToMiles(kilometers) {
+  return kilometers * 1.609;
+}
 
-
-
+// console.log(kiloToMiles(3));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function toCm(feet){
+  return feet * 30.48;
+}
 
-
+console.log(toCm(3));
 
 
 /************************************************************** Task 6 **************************************************************/
